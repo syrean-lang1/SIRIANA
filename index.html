@@ -138,16 +138,83 @@ footer {
     padding: 20px;
     opacity: 0.6;
 }
+
+/* ===== RESPONSIVE (MOBILE ONLY ADDITION) ===== */
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 25px;
+        border-radius: 14px;
+    }
+
+    .login-box h1 {
+        font-size: 22px;
+    }
+
+    .top {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .top h2 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .top input {
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+    }
+
+    ul {
+        padding-right: 15px;
+        font-size: 14px;
+    }
+
+    .data-list div {
+        font-size: 13px;
+    }
+
+    .center-note {
+        margin: 20px;
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- LOGIN -->
 <div class="login" id="loginBox">
     <div class="login-box">
         <h1>SIRIANA SOFT</h1>
-        <p>  </p>
+        <p></p>
 
         <input id="username" placeholder="اسم المستخدم">
         <input id="password" type="password" placeholder="كلمة المرور">
@@ -157,7 +224,6 @@ footer {
     </div>
 </div>
 
-<!-- DASHBOARD -->
 <div class="dashboard" id="dashboard">
 
     <div class="top">
