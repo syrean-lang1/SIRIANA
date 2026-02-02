@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Siriana Soft | </title>
+
+<style>
+:root {
+    --card: rgba(255,255,255,0.06);
+    --border: rgba(255,255,255,0.12);
+    --neon1: #00f6ff;
+    --neon2: #7a5cff;
+    --text: #eaeaff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    direction: rtl;
+    background: radial-gradient(circle at top, #0b1020, #02030a);
+    color: var(--text);
+}
+
+/* LOGIN */
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 380px;
+    padding: 40px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.login-box h1 {
+    margin: 0;
+    font-size: 28px;
+    background: linear-gradient(90deg,var(--neon1),var(--neon2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+}
+
+.login-box button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(90deg,var(--neon1),var(--neon2));
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#error { color: #ff5c7a; margin-top: 10px; }
+
+/* DASHBOARD */
+.dashboard { display: none; }
+
+.top {
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+}
+
+.top input {
+    padding: 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text);
+}
+
+.container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.card h3 {
+    margin-top: 0;
+    background: linear-gradient(90deg,var(--neon1),var(--neon2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+ul { line-height: 2; padding-right: 20px; }
+
+.center-note {
+    text-align: center;
+    margin: 30px 0;
+    opacity: 0.8;
+}
+
+.data-list div {
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.15);
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 18px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.6;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div class="login" id="loginBox">
+    <div class="login-box">
+        <h1>SIRIANA SOFT</h1>
+        <p>  </p>
+
+        <input id="username" placeholder="اسم المستخدم">
+        <input id="password" type="password" placeholder="كلمة المرور">
+
+        <button onclick="doLogin()">دخول</button>
+        <div id="error"></div>
+    </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard" id="dashboard">
+
+    <div class="top">
+        <h2>لوحة المسوق الإلكتروني</h2>
+        <input placeholder="ادخل كودك الوظيفي">
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <h3>واجبات المسوق – سوريا</h3>
+            <ul>
+                <li>تسويق خدمات سيريانا سوفت البرمجية</li>
+                <li>تسويق الأنظمة البرمجية المتكاملة</li>
+                <li>تسويق تطبيقات الموبايل والويب</li>
+                <li>تسويق البرامج المكتبية</li>
+                <li>تسويق المواقع والمتاجر الإلكترونية</li>
+                <li>تسويق الحلول التقنية المخصصة</li>
+                <li>جلب مشاريع حقيقية قابلة للتنفيذ</li>
+                <li>التواصل المهني مع العملاء</li>
+                <li>الالتزام بهوية وسياسة الشركة</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>حقوق المسوق</h3>
+            <ul>
+                <li>عمولات رسمية حسب عدد المشاريع</li>
+                <li>دعم إداري وتقني مباشر</li>
+                <li>أولوية في استلام المشاريع</li>
+                <li>فرص ترقية وتطوير مهني</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>النِسَب والترقيات</h3>
+            <ul>
+                <li>أول 3 مشاريع: 12%</li>
+                <li>بعدها: 15%</li>
+                <li>قد تصل إلى 20%</li>
+                <li>بعد 100 مشروع: توظيف رسمي</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>التواصل الضروري والرسمي</h3>
+            <p>
+                أ.م. أحمد اليوسف<br>
+                المدير التنفيذي – الشركة الأم<br>
+                المسؤول المباشر في سوريا
+            </p>
+            <a class="whatsapp" href="https://wa.me/963932175450" target="_blank">
+                واتساب رسمي
+            </a>
+        </div>
+
+    </div>
+
+    <div class="center-note">
+        سيتم عرض بياناتك قريباً بشكل فردي بناءً على كودك الوظيفي
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>البيانات الشخصية والمهنية</h3>
+            <div class="data-list">
+                <div>الاسم : قريباً</div>
+                <div>اسم الأب ونسبته : قريباً</div>
+                <div>اسم الأم ونسبتها : قريباً</div>
+                <div>الرقم الوطني : قريباً</div>
+                <div>النوع : قريباً</div>
+                <div>تاريخ ومكان الميلاد : قريباً</div>
+                <div>مكان الإقامة : قريباً</div>
+                <div>رقم الهاتف : قريباً</div>
+                <div>معرف تلجرام : قريباً</div>
+                <div>البريد الإلكتروني : قريباً</div>
+                <div>رقم الحساب البنكي : قريباً</div>
+                <div>رقم الشام كاش : قريباً</div>
+                <div>الصفة : قريباً</div>
+                <div>عدد المشاريع : قريباً</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Siriana Soft</footer>
+</div>
+
+<script>
+function doLogin() {
+    const u = document.getElementById("username").value.trim();
+    const p = document.getElementById("password").value.trim();
+    const error = document.getElementById("error");
+
+    if (u === "SY+963" && p === "^A9$~SyR!X@#963*Qm%LZ&AI7_") {
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        error.innerText = "";
+    } else {
+        error.innerText = "بيانات الدخول غير صحيحة";
+    }
+}
+</script>
+
+</body>
+</html>
